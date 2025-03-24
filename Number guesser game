@@ -1,0 +1,31 @@
+//This is a little program I made in like, 10 minutes lol. I don't know why I did it, I was just bored. You're free to change the range of the random numbers!
+Console.WriteLine("Welcome to the Guess the Number Game! 🎲");
+Console.WriteLine("I have chosen a number between 1 and 100. Try to guess it!");
+Random random = new Random();
+int compGuess = random.Next(1, 101);
+Console.WriteLine("Enter your guess:");
+bool continuation = true;
+int tries = 0;
+while (continuation == true)
+{
+    int playerGuess = int.Parse(Console.ReadLine());
+    if (playerGuess < compGuess)
+    {
+        Console.WriteLine("Too low! Try again!");
+        Console.WriteLine("Enter your guess:");
+        tries++;
+        continue;
+    }
+    else if (playerGuess > compGuess)
+    {
+        Console.WriteLine("Too high! Try again!");
+        Console.WriteLine("Enter your guess:");
+        tries++;
+        continue;
+    }
+    else if(playerGuess == compGuess)
+    {
+        Console.WriteLine($"Congratulations! You guessed the number in {tries} attempts!");
+        break;
+    }
+}
