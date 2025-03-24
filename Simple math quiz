@@ -1,0 +1,84 @@
+//This is one of the programs, which of March 24st, I am the proudest from. This is a "fun" math quiz game, that allows you to test your basic knowledge in math!
+Console.WriteLine("Welcome to the Math Quiz Game! 🎯");
+Console.WriteLine("You will be asked 5 math questions. Try to answer correctly!");                       
+Console.WriteLine("---------------------------------------------------");
+bool playAgain = true;
+int points = 0;
+while (playAgain == true)
+{
+    Random random = new Random();
+    int num = random.Next(1, 20);
+    Random random2 = new Random();
+    int num1 = random.Next(1, 20);
+    Random random1 = new Random();
+    int operation = random1.Next(1, 5);
+    if (operation == 1)
+    {
+        Console.WriteLine($"Question 1: What is {num} + {num1}?");
+        int answer = int.Parse(Console.ReadLine());
+        if (answer == num + num1)
+        {
+            Console.WriteLine($"✅ Correct! You earned {points} point.");
+            points++;
+        }
+        else
+        {
+            Console.WriteLine($"❌ Wrong! The correct answer was {num + num1}.");
+        }
+    }
+    else if (operation == 2)
+    {
+        Console.WriteLine($"Question 1: What is {num} - {num1}?");
+        int answer = int.Parse(Console.ReadLine());
+        if (answer == num - num1)
+        {
+            Console.WriteLine($"✅ Correct! You earned {points} point.");
+            points++;
+        }
+        else
+        {
+            Console.WriteLine($"❌ Wrong! The correct answer was {num - num1}.");
+        }
+    }
+    else if (operation == 3)
+    {
+        Console.WriteLine($"Question 1: What is {num} / {num1}?");
+        int answer = int.Parse(Console.ReadLine());
+        if (answer == num / num1)
+        {
+            Console.WriteLine($"✅ Correct! You earned {points} point.");
+            points++;
+        }
+        else
+        {
+            Console.WriteLine($"❌ Wrong! The correct answer was {num / num1}.");
+        }
+    }
+    else if (operation == 4)
+    {
+        Console.WriteLine($"Question 1: What is {num} * {num1}?");
+        int answer = int.Parse(Console.ReadLine());
+        if (answer == num * num1)
+        {
+            Console.WriteLine($"✅ Correct! You earned {points} point.");
+            points++;
+        }
+        else
+        {
+            Console.WriteLine($"❌ Wrong! The correct answer was {num * num1}.");
+        }
+    }
+    Console.WriteLine(points);
+    Console.WriteLine("Would you like to play again? (Yes/No)");
+    string playAgain1 = Console.ReadLine();
+    if(playAgain1 == "Yes")
+    {
+        playAgain = true;
+        ;
+    }
+    else
+    {
+        playAgain = false;
+        break;
+    }
+}
