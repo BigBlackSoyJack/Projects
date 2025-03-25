@@ -1,0 +1,22 @@
+//This is a program that rolls 2 six sided dice
+Console.WriteLine($"Rolling the dice... 🎲🎲  ");
+bool rolling = true;
+while(rolling = true)
+{
+    Random random = new Random();
+    int roll1 = random.Next(1, 7);
+    int roll2 = random.Next(1, 7);
+    int total = roll1 + roll2;
+    Console.WriteLine($"You rolled {roll1} and a {roll2}!");
+    Console.WriteLine($"Total: {total}  ");
+    Console.WriteLine("Roll again?:");
+    string answer = Console.ReadLine();
+    if (answer == "Yes")
+    {
+        continue;
+    }
+    else
+    {
+        break;
+    }
+}
